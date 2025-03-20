@@ -15,10 +15,13 @@ header {
 .logo {
     width: 100px;
     height: auto;
+    border-radius: 50px;
 }
 
 main {
-    padding: 20px;
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-top: 1%;
 }
 
 button {
@@ -42,4 +45,8 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
+}
+
+#left {
+    text-align: left;
 }

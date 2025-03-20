@@ -8,16 +8,44 @@
 </head>
 <body>
     <header>
-        <img src="images/logo.png" alt="Website Logo" class="logo">
-        <h1>Welcome to My Static Website</h1>
+        <img src="images/img.jpg" alt="Website Logo" class="logo">
+        <h1>How to Host a Static Website on AWS S3</h1>
     </header>
     <main>
-        <p>This is a sample static website hosted on AWS S3.</p>
+        <p>Welcome! In this guide, I’ll walk you through the steps I took to host this static website using Amazon S3. 
+            This project is part of my learning journey as I explore AWS to build my cloud portfolio.</p>
+        <h3>Step-by-Step Guide: Hosting a Website with Amazon S3</h3>
+        <ol>
+            <li id="left">
+                <h4>Create an S3 Bucket</h4>
+                <p>I started by creating an Amazon S3 bucket. This is where all the website files (HTML, CSS, JavaScript) are stored.</p>
+            </li>
+
+            <li id="left">
+                <h4>Upload Website Files</h4>
+                <p>After creating the bucket, I uploaded the website files to the bucket, including this page you’re reading now!</p>
+            </li>
+
+            <li id="left">
+                <h4>Enable Static Website Hosting</h4>
+                <p>I enabled Static Website Hosting in the bucket’s properties. This turns the S3 bucket into a public-facing website that anyone can access.</p>
+            </li>
+
+            <li id="left">
+                <h4>Set Permissions</h4>
+                <p>To make the site public, I had to set permissions in the S3 bucket policy, allowing users to view my website by accessing the files in the bucket.</p>
+            </li>
+
+            <li id="left">
+                <h4>Access the Website</h4>
+                <p>Once the setup was done, I got a public URL from AWS where the site is hosted. This is where you are reading this guide!</p>
+            </li>
+        </ol>
         <button id="clickMe">Click Me!</button>
         <p id="output"></p>
     </main>
     <footer>
-        <p>&copy; 2023 My Static Website</p>
+        <p>&copy; 2025 My Static Website</p>
     </footer>
     <script src="script.js"></script>
 </body>
