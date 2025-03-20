@@ -12,9 +12,8 @@
         <h1>How to Host a Static Website on AWS S3</h1>
     </header>
     <main>
-        <p>Welcome! In this guide, I’ll walk you through the steps I took to host this static website using Amazon S3. 
-            This project is part of my learning journey as I explore AWS to build my cloud portfolio.</p>
-        <h3 id="left">Step-by-Step Guide: Hosting a Website with Amazon S3</h3>
+        <p>Welcome! In this guide, I’ll walk you through the steps I took to host this static website using Amazon S3 and set up a continuous integration and deployment (CI/CD) pipeline using GitHub. This project is part of my learning journey as I explore AWS and build my cloud portfolio.</p>
+        <h3 id="left">Step-by-Step Guide: Hosting a Website with Amazon S3 and CI/CD</h3>
         <ol>
             <li id="left">
                 <h4>Create an S3 Bucket</h4>
@@ -33,7 +32,20 @@
 
             <li id="left">
                 <h4>Set Permissions</h4>
-                <p>To make the site public, I had to set permissions in the S3 bucket policy, allowing users to view my website by accessing the files in the bucket.</p>
+                <p>To make the site public, I had to set permissions in the S3 bucket policy, allowing users to view my website by accessing the files in the bucket. I used the aws policy generator to generate the "s3:GetObject" policy.</p>
+                <img src="images/policy_generate_aws_s3.PNG" alt="Website Logo">
+            </li>
+
+            <li id="left">
+                <h4>Set Up Continuous Integration/Deployment (CI/CD)</h4>
+                <p>After deploying the website, I initiated a CI/CD pipeline using GitHub. Now, anytime I push changes to my GitHub main branch, the website in the S3 bucket is automatically updated.</p>
+                <ul>
+                    <li><b>Created an IAM User:</b> I created a user in AWS and attached the AmazonS3FullAccess policy to grant the necessary permissions for accessing and updating the S3 bucket.</li>
+                    <li><b>Generated Access Keys:</b> I generated an access key and secret key for the user.</li>
+                    <li><b>Configured GitHub:</b> I added the access keys to my GitHub repository as secrets, allowing GitHub to interact with my S3 bucket securely.</li>
+                    <li><b>Created a Workflow File:</b> I wrote a workflow YAML file in GitHub that defines what happens whenever I push changes to the main branch. This file triggers the automatic deployment to the S3 bucket.</li>
+                    <img src="images/sample_yaml_file.PNG" alt="Website Logo">
+                </ul>
             </li>
 
             <li id="left">
@@ -41,20 +53,19 @@
                 <p>Once the setup was done, I got a public URL from AWS where the site is hosted. This is where you are reading this guide!</p>
             </li>
         </ol>
-        <h3 id="left">What I’ve Learned:</h3>
+        <h3 id="left">What I’ve Learned and demonstrated:</h3>
         <ul>
-            <li id="left">S3 Basics: I learned how to create an S3 bucket and upload files.</li>
-            <li id="left">Static Website Hosting: I understood how AWS S3 can host static websites without a need for servers.</li>
-            <li id="left">Bucket Policies: I configured permissions using bucket policies to control access.</li>
-            <li id="left">Website Deployment: I experienced a complete deployment process using AWS S3.</li>
+            <li id="left"><b>Amazon S3 Basics:</b> I learned how to create an S3 bucket and upload files.</li>
+            <li id="left"><b>Static Website Hosting:</b> I understood how AWS S3 can host static websites without a need for servers.</li>
+            <li id="left"><b>Bucket Policies:</b> I configured permissions using bucket policies to control access.</li>
+            <li id="left"><b>CI/CD with GitHub:</b> I implemented a CI/CD pipeline to automatically deploy updates to the S3 bucket whenever I push changes to GitHub. This improves the workflow by automating deployments.</li>
+            <li id="left"><b>IAM and Security:</b> I gained experience in creating IAM users, managing access keys, and securely integrating GitHub with AWS.</li>
         </ul>
         <p id="left">This is just the beginning of my AWS learning journey. Stay tuned for more projects as I explore AWS services and cloud computing.</p>
         <button id="clickMe">Click Me!</button>
         <p id="output"></p>
     </main>
-    <!-- <div id="view-counter" class="view-counter">
-        Views: <span id="counter-value">0</span>
-    </div> -->
+
     <footer>
         <p>&copy; 2025 My Static Website</p>
     </footer>

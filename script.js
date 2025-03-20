@@ -1,3 +1,3 @@
 document.getElementById("clickMe").addEventListener("click", function() {
-    document.getElementById("output").textContent = "Button clicked!";
+    document.getElementById("output").textContent = "Thanks for folowing my journey!";
 });
