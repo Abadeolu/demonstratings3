@@ -50,3 +50,23 @@ footer {
 #left {
     text-align: left;
 }
+
+/* Floating View Counter Style */
+.view-counter {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    background-color: rgba(255, 0, 0, 0.8);
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    z-index: 1000;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+#counter-value {
+    font-weight: bold;
+    font-size: 18px;
+}
