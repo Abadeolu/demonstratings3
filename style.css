@@ -51,3 +51,22 @@ footer {
 #left {
     text-align: left;
 }
+
+
+/* Make images responsive */
+img {
+    max-width: 100%; /* Ensure the image never exceeds its container's width */
+    height: auto; /* Maintain the image's aspect ratio */
+}
+
+
+/* Media query for mobile screens (600px or less) */
+@media (max-width: 600px) {
+
+
+    main {
+        padding:3%; /* Adjust main content padding */
+    }
+
+
+}
