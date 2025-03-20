@@ -1,4 +1,5 @@
 🚀 Static Website Hosting with AWS S3 and GitHub CI/CD
+
 This project demonstrates how to host a static website using Amazon S3 and set up a Continuous Integration/Continuous Deployment (CI/CD) pipeline using GitHub Actions. Every time changes are pushed to the main branch, the website is automatically updated and deployed to the S3 bucket.
 
 Features
